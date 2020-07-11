@@ -1,0 +1,42 @@
+/**index.wxss**/
+.container {
+  padding: 0;
+  background-color: #444;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start
+
+}
+/* 用户信息 */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200rpx;
+  margin-bottom: 50rpx 
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #fff;
+}
+/**/
+.userBox {
+  /*margin-top: 200px;*/
+  font-size: 55rpx;
+  line-height: 100rpx;
+  border: 5rpx solid #000;
+  border-radius: 15rpx;
+  padding: 10rpx
+}
+.userBoxText{
+  font-size: 100 rpx;
+  color: #fff;
+  text-align: center
+}

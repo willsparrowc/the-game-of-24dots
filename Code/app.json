@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTitleText": "最强24点",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

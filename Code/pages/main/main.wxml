@@ -1,0 +1,46 @@
+<!--pages/main.wxml-->
+<!--pages/main.wxml-->
+<view class="container">
+  <loading class="loadingText" hidden="{{hiddenLoading}}">
+    有二事焉,恒然于心；敬之畏之,日省日甚：外乎者如璀璨星穹,内在者犹道德律令。(康德)' 
+  </loading>
+  <!--滚动条幅-->
+  <view class="banner">
+      <view class="banner_text">{{banner}}</view>
+  </view> 
+
+    <!--卡片区域-->
+  <view class="box-container" style="background:url({{background}});">
+    <view class="box" wx:for="{{cards}}" wx:for-index="cardIdx" wx:for-item="card" wx:key="unique">
+      <view class="card" wx:if="{{!card.hidden}}" bindtap="touchCard" data-card-position="{{card.position}}" style="background-color:{{card.color}}">
+        <text class="card_inner_top">{{card.value}}</text>
+        <text class="card_inner_bottom">{{card.value}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!--运算和计时区-->
+  <view class="operate">
+    <!--操作运算盘-->
+    <view class="circle" >
+        <!--撤销按钮-->
+        <view class="view-return" bindtap="goback">
+          <image class="image-style" src="{{gobackPng}}"></image>
+        </view>
+        <!--<view class="menu_list">-->
+            <!---加减乘除按钮-->
+            <view class="menu-item" wx:for="{{menuList}}" wx:key="unique" >
+              <view class="menu-circle-item"  data-operator="{{item.operator}}"  style="transform: rotate({{item.deg}}deg)" bindtap="touchOperator">
+                <image class="image-style" src="{{item.src}}"></image>
+              </view>
+            </view>
+        <!--</view>-->
+    </view>
+    <!--计时器-->
+    <view class="timer" bindtap="touchTimer" bindlongpress="keepTouchTimer">
+      <text class="timer_time">{{remainTime}}</text>
+    </view>
+  </view>
+
+</view>
+
